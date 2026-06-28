@@ -1,7 +1,41 @@
+// {
+//     "configurations": [
+//         {
+//             "name": "Linux",
+//             "includePath": [
+//                 "${workspaceFolder}/**",
+//                 "${workspaceFolder}/third_party/**"
+//             ],
+//             "defines": ["STM32F412xC"],
+//             "compilerPath": "/usr/bin/arm-none-eabi-gcc",
+//             "cStandard": "c17",
+//             "cppStandard": "gnu++17",
+//             "intelliSenseMode": "linux-gcc-arm"
+//         }
+//     ],
+//     "version": 4
+// }
 {
     "configurations": [
         {
-            "name": "Linux",
+            "name": "V-HIL-SIL (리눅스 가상화 모드)",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/include/**",
+                "/usr/local/include/**"
+            ],
+            // 👇 [가속 헤더 억까 격파 치트키] 에디터가 stm32 내부의 ARM 특화 코드를 강제로 무시하고 스킵하게 만드는 매크로 주입!
+            "defines": [
+                "__ARM_ACLE=0",
+                "__ARM_COMPAT_H=1"
+            ],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu11",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "linux-gcc-x64"
+        },
+        {
+            "name": "Target-Board (진짜 STM32 보드 모드)",
             "includePath": [
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/third_party/**"
