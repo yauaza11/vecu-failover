@@ -117,43 +117,365 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named node_a_pedal_ecu
+# Target rules for targets named node_a_active
 
 # Build rule for target.
-node_a_pedal_ecu: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 node_a_pedal_ecu
-.PHONY : node_a_pedal_ecu
+node_a_active: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 node_a_active
+.PHONY : node_a_active
 
 # fast build rule for target.
-node_a_pedal_ecu/fast:
-	$(MAKE) $(MAKESILENT) -f node_a_pedal_ecu/CMakeFiles/node_a_pedal_ecu.dir/build.make node_a_pedal_ecu/CMakeFiles/node_a_pedal_ecu.dir/build
-.PHONY : node_a_pedal_ecu/fast
+node_a_active/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_a_active.dir/build.make CMakeFiles/node_a_active.dir/build
+.PHONY : node_a_active/fast
 
 #=============================================================================
-# Target rules for targets named node_b_engine_ecu
+# Target rules for targets named node_b_standby
 
 # Build rule for target.
-node_b_engine_ecu: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 node_b_engine_ecu
-.PHONY : node_b_engine_ecu
+node_b_standby: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 node_b_standby
+.PHONY : node_b_standby
 
 # fast build rule for target.
-node_b_engine_ecu/fast:
-	$(MAKE) $(MAKESILENT) -f node_b_engine_ecu/CMakeFiles/node_b_engine_ecu.dir/build.make node_b_engine_ecu/CMakeFiles/node_b_engine_ecu.dir/build
-.PHONY : node_b_engine_ecu/fast
+node_b_standby/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_b_standby.dir/build.make CMakeFiles/node_b_standby.dir/build
+.PHONY : node_b_standby/fast
 
 #=============================================================================
-# Target rules for targets named node_c_cluster_ecu
+# Target rules for targets named node_c_env
 
 # Build rule for target.
-node_c_cluster_ecu: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 node_c_cluster_ecu
-.PHONY : node_c_cluster_ecu
+node_c_env: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 node_c_env
+.PHONY : node_c_env
 
 # fast build rule for target.
-node_c_cluster_ecu/fast:
-	$(MAKE) $(MAKESILENT) -f node_c_cluster_ecu/CMakeFiles/node_c_cluster_ecu.dir/build.make node_c_cluster_ecu/CMakeFiles/node_c_cluster_ecu.dir/build
-.PHONY : node_c_cluster_ecu/fast
+node_c_env/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_c_env.dir/build.make CMakeFiles/node_c_env.dir/build
+.PHONY : node_c_env/fast
+
+Core/Src/Rte_mock.o: Core/Src/Rte_mock.c.o
+.PHONY : Core/Src/Rte_mock.o
+
+# target to build an object file
+Core/Src/Rte_mock.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_a_active.dir/build.make CMakeFiles/node_a_active.dir/Core/Src/Rte_mock.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_b_standby.dir/build.make CMakeFiles/node_b_standby.dir/Core/Src/Rte_mock.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_c_env.dir/build.make CMakeFiles/node_c_env.dir/Core/Src/Rte_mock.c.o
+.PHONY : Core/Src/Rte_mock.c.o
+
+Core/Src/Rte_mock.i: Core/Src/Rte_mock.c.i
+.PHONY : Core/Src/Rte_mock.i
+
+# target to preprocess a source file
+Core/Src/Rte_mock.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_a_active.dir/build.make CMakeFiles/node_a_active.dir/Core/Src/Rte_mock.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_b_standby.dir/build.make CMakeFiles/node_b_standby.dir/Core/Src/Rte_mock.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_c_env.dir/build.make CMakeFiles/node_c_env.dir/Core/Src/Rte_mock.c.i
+.PHONY : Core/Src/Rte_mock.c.i
+
+Core/Src/Rte_mock.s: Core/Src/Rte_mock.c.s
+.PHONY : Core/Src/Rte_mock.s
+
+# target to generate assembly for a file
+Core/Src/Rte_mock.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_a_active.dir/build.make CMakeFiles/node_a_active.dir/Core/Src/Rte_mock.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_b_standby.dir/build.make CMakeFiles/node_b_standby.dir/Core/Src/Rte_mock.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_c_env.dir/build.make CMakeFiles/node_c_env.dir/Core/Src/Rte_mock.c.s
+.PHONY : Core/Src/Rte_mock.c.s
+
+Core/Src/hil.o: Core/Src/hil.c.o
+.PHONY : Core/Src/hil.o
+
+# target to build an object file
+Core/Src/hil.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_a_active.dir/build.make CMakeFiles/node_a_active.dir/Core/Src/hil.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_b_standby.dir/build.make CMakeFiles/node_b_standby.dir/Core/Src/hil.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_c_env.dir/build.make CMakeFiles/node_c_env.dir/Core/Src/hil.c.o
+.PHONY : Core/Src/hil.c.o
+
+Core/Src/hil.i: Core/Src/hil.c.i
+.PHONY : Core/Src/hil.i
+
+# target to preprocess a source file
+Core/Src/hil.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_a_active.dir/build.make CMakeFiles/node_a_active.dir/Core/Src/hil.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_b_standby.dir/build.make CMakeFiles/node_b_standby.dir/Core/Src/hil.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_c_env.dir/build.make CMakeFiles/node_c_env.dir/Core/Src/hil.c.i
+.PHONY : Core/Src/hil.c.i
+
+Core/Src/hil.s: Core/Src/hil.c.s
+.PHONY : Core/Src/hil.s
+
+# target to generate assembly for a file
+Core/Src/hil.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_a_active.dir/build.make CMakeFiles/node_a_active.dir/Core/Src/hil.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_b_standby.dir/build.make CMakeFiles/node_b_standby.dir/Core/Src/hil.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_c_env.dir/build.make CMakeFiles/node_c_env.dir/Core/Src/hil.c.s
+.PHONY : Core/Src/hil.c.s
+
+Core/Src/main_node_a.o: Core/Src/main_node_a.c.o
+.PHONY : Core/Src/main_node_a.o
+
+# target to build an object file
+Core/Src/main_node_a.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_a_active.dir/build.make CMakeFiles/node_a_active.dir/Core/Src/main_node_a.c.o
+.PHONY : Core/Src/main_node_a.c.o
+
+Core/Src/main_node_a.i: Core/Src/main_node_a.c.i
+.PHONY : Core/Src/main_node_a.i
+
+# target to preprocess a source file
+Core/Src/main_node_a.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_a_active.dir/build.make CMakeFiles/node_a_active.dir/Core/Src/main_node_a.c.i
+.PHONY : Core/Src/main_node_a.c.i
+
+Core/Src/main_node_a.s: Core/Src/main_node_a.c.s
+.PHONY : Core/Src/main_node_a.s
+
+# target to generate assembly for a file
+Core/Src/main_node_a.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_a_active.dir/build.make CMakeFiles/node_a_active.dir/Core/Src/main_node_a.c.s
+.PHONY : Core/Src/main_node_a.c.s
+
+Core/Src/main_node_b.o: Core/Src/main_node_b.c.o
+.PHONY : Core/Src/main_node_b.o
+
+# target to build an object file
+Core/Src/main_node_b.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_b_standby.dir/build.make CMakeFiles/node_b_standby.dir/Core/Src/main_node_b.c.o
+.PHONY : Core/Src/main_node_b.c.o
+
+Core/Src/main_node_b.i: Core/Src/main_node_b.c.i
+.PHONY : Core/Src/main_node_b.i
+
+# target to preprocess a source file
+Core/Src/main_node_b.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_b_standby.dir/build.make CMakeFiles/node_b_standby.dir/Core/Src/main_node_b.c.i
+.PHONY : Core/Src/main_node_b.c.i
+
+Core/Src/main_node_b.s: Core/Src/main_node_b.c.s
+.PHONY : Core/Src/main_node_b.s
+
+# target to generate assembly for a file
+Core/Src/main_node_b.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_b_standby.dir/build.make CMakeFiles/node_b_standby.dir/Core/Src/main_node_b.c.s
+.PHONY : Core/Src/main_node_b.c.s
+
+Core/Src/main_node_c.o: Core/Src/main_node_c.c.o
+.PHONY : Core/Src/main_node_c.o
+
+# target to build an object file
+Core/Src/main_node_c.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_c_env.dir/build.make CMakeFiles/node_c_env.dir/Core/Src/main_node_c.c.o
+.PHONY : Core/Src/main_node_c.c.o
+
+Core/Src/main_node_c.i: Core/Src/main_node_c.c.i
+.PHONY : Core/Src/main_node_c.i
+
+# target to preprocess a source file
+Core/Src/main_node_c.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_c_env.dir/build.make CMakeFiles/node_c_env.dir/Core/Src/main_node_c.c.i
+.PHONY : Core/Src/main_node_c.c.i
+
+Core/Src/main_node_c.s: Core/Src/main_node_c.c.s
+.PHONY : Core/Src/main_node_c.s
+
+# target to generate assembly for a file
+Core/Src/main_node_c.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_c_env.dir/build.make CMakeFiles/node_c_env.dir/Core/Src/main_node_c.c.s
+.PHONY : Core/Src/main_node_c.c.s
+
+Core/Src/protocol.o: Core/Src/protocol.c.o
+.PHONY : Core/Src/protocol.o
+
+# target to build an object file
+Core/Src/protocol.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_a_active.dir/build.make CMakeFiles/node_a_active.dir/Core/Src/protocol.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_b_standby.dir/build.make CMakeFiles/node_b_standby.dir/Core/Src/protocol.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_c_env.dir/build.make CMakeFiles/node_c_env.dir/Core/Src/protocol.c.o
+.PHONY : Core/Src/protocol.c.o
+
+Core/Src/protocol.i: Core/Src/protocol.c.i
+.PHONY : Core/Src/protocol.i
+
+# target to preprocess a source file
+Core/Src/protocol.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_a_active.dir/build.make CMakeFiles/node_a_active.dir/Core/Src/protocol.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_b_standby.dir/build.make CMakeFiles/node_b_standby.dir/Core/Src/protocol.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_c_env.dir/build.make CMakeFiles/node_c_env.dir/Core/Src/protocol.c.i
+.PHONY : Core/Src/protocol.c.i
+
+Core/Src/protocol.s: Core/Src/protocol.c.s
+.PHONY : Core/Src/protocol.s
+
+# target to generate assembly for a file
+Core/Src/protocol.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_a_active.dir/build.make CMakeFiles/node_a_active.dir/Core/Src/protocol.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_b_standby.dir/build.make CMakeFiles/node_b_standby.dir/Core/Src/protocol.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_c_env.dir/build.make CMakeFiles/node_c_env.dir/Core/Src/protocol.c.s
+.PHONY : Core/Src/protocol.c.s
+
+third_party/cmsis_f4/Source/Templates/gcc/startup_stm32f412cx.o: third_party/cmsis_f4/Source/Templates/gcc/startup_stm32f412cx.s.o
+.PHONY : third_party/cmsis_f4/Source/Templates/gcc/startup_stm32f412cx.o
+
+# target to build an object file
+third_party/cmsis_f4/Source/Templates/gcc/startup_stm32f412cx.s.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_a_active.dir/build.make CMakeFiles/node_a_active.dir/third_party/cmsis_f4/Source/Templates/gcc/startup_stm32f412cx.s.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_b_standby.dir/build.make CMakeFiles/node_b_standby.dir/third_party/cmsis_f4/Source/Templates/gcc/startup_stm32f412cx.s.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_c_env.dir/build.make CMakeFiles/node_c_env.dir/third_party/cmsis_f4/Source/Templates/gcc/startup_stm32f412cx.s.o
+.PHONY : third_party/cmsis_f4/Source/Templates/gcc/startup_stm32f412cx.s.o
+
+third_party/freertos/list.o: third_party/freertos/list.c.o
+.PHONY : third_party/freertos/list.o
+
+# target to build an object file
+third_party/freertos/list.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_a_active.dir/build.make CMakeFiles/node_a_active.dir/third_party/freertos/list.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_b_standby.dir/build.make CMakeFiles/node_b_standby.dir/third_party/freertos/list.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_c_env.dir/build.make CMakeFiles/node_c_env.dir/third_party/freertos/list.c.o
+.PHONY : third_party/freertos/list.c.o
+
+third_party/freertos/list.i: third_party/freertos/list.c.i
+.PHONY : third_party/freertos/list.i
+
+# target to preprocess a source file
+third_party/freertos/list.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_a_active.dir/build.make CMakeFiles/node_a_active.dir/third_party/freertos/list.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_b_standby.dir/build.make CMakeFiles/node_b_standby.dir/third_party/freertos/list.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_c_env.dir/build.make CMakeFiles/node_c_env.dir/third_party/freertos/list.c.i
+.PHONY : third_party/freertos/list.c.i
+
+third_party/freertos/list.s: third_party/freertos/list.c.s
+.PHONY : third_party/freertos/list.s
+
+# target to generate assembly for a file
+third_party/freertos/list.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_a_active.dir/build.make CMakeFiles/node_a_active.dir/third_party/freertos/list.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_b_standby.dir/build.make CMakeFiles/node_b_standby.dir/third_party/freertos/list.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_c_env.dir/build.make CMakeFiles/node_c_env.dir/third_party/freertos/list.c.s
+.PHONY : third_party/freertos/list.c.s
+
+third_party/freertos/portable/GCC/ARM_CM4F/port.o: third_party/freertos/portable/GCC/ARM_CM4F/port.c.o
+.PHONY : third_party/freertos/portable/GCC/ARM_CM4F/port.o
+
+# target to build an object file
+third_party/freertos/portable/GCC/ARM_CM4F/port.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_a_active.dir/build.make CMakeFiles/node_a_active.dir/third_party/freertos/portable/GCC/ARM_CM4F/port.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_b_standby.dir/build.make CMakeFiles/node_b_standby.dir/third_party/freertos/portable/GCC/ARM_CM4F/port.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_c_env.dir/build.make CMakeFiles/node_c_env.dir/third_party/freertos/portable/GCC/ARM_CM4F/port.c.o
+.PHONY : third_party/freertos/portable/GCC/ARM_CM4F/port.c.o
+
+third_party/freertos/portable/GCC/ARM_CM4F/port.i: third_party/freertos/portable/GCC/ARM_CM4F/port.c.i
+.PHONY : third_party/freertos/portable/GCC/ARM_CM4F/port.i
+
+# target to preprocess a source file
+third_party/freertos/portable/GCC/ARM_CM4F/port.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_a_active.dir/build.make CMakeFiles/node_a_active.dir/third_party/freertos/portable/GCC/ARM_CM4F/port.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_b_standby.dir/build.make CMakeFiles/node_b_standby.dir/third_party/freertos/portable/GCC/ARM_CM4F/port.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_c_env.dir/build.make CMakeFiles/node_c_env.dir/third_party/freertos/portable/GCC/ARM_CM4F/port.c.i
+.PHONY : third_party/freertos/portable/GCC/ARM_CM4F/port.c.i
+
+third_party/freertos/portable/GCC/ARM_CM4F/port.s: third_party/freertos/portable/GCC/ARM_CM4F/port.c.s
+.PHONY : third_party/freertos/portable/GCC/ARM_CM4F/port.s
+
+# target to generate assembly for a file
+third_party/freertos/portable/GCC/ARM_CM4F/port.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_a_active.dir/build.make CMakeFiles/node_a_active.dir/third_party/freertos/portable/GCC/ARM_CM4F/port.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_b_standby.dir/build.make CMakeFiles/node_b_standby.dir/third_party/freertos/portable/GCC/ARM_CM4F/port.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_c_env.dir/build.make CMakeFiles/node_c_env.dir/third_party/freertos/portable/GCC/ARM_CM4F/port.c.s
+.PHONY : third_party/freertos/portable/GCC/ARM_CM4F/port.c.s
+
+third_party/freertos/portable/MemMang/heap_4.o: third_party/freertos/portable/MemMang/heap_4.c.o
+.PHONY : third_party/freertos/portable/MemMang/heap_4.o
+
+# target to build an object file
+third_party/freertos/portable/MemMang/heap_4.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_a_active.dir/build.make CMakeFiles/node_a_active.dir/third_party/freertos/portable/MemMang/heap_4.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_b_standby.dir/build.make CMakeFiles/node_b_standby.dir/third_party/freertos/portable/MemMang/heap_4.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_c_env.dir/build.make CMakeFiles/node_c_env.dir/third_party/freertos/portable/MemMang/heap_4.c.o
+.PHONY : third_party/freertos/portable/MemMang/heap_4.c.o
+
+third_party/freertos/portable/MemMang/heap_4.i: third_party/freertos/portable/MemMang/heap_4.c.i
+.PHONY : third_party/freertos/portable/MemMang/heap_4.i
+
+# target to preprocess a source file
+third_party/freertos/portable/MemMang/heap_4.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_a_active.dir/build.make CMakeFiles/node_a_active.dir/third_party/freertos/portable/MemMang/heap_4.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_b_standby.dir/build.make CMakeFiles/node_b_standby.dir/third_party/freertos/portable/MemMang/heap_4.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_c_env.dir/build.make CMakeFiles/node_c_env.dir/third_party/freertos/portable/MemMang/heap_4.c.i
+.PHONY : third_party/freertos/portable/MemMang/heap_4.c.i
+
+third_party/freertos/portable/MemMang/heap_4.s: third_party/freertos/portable/MemMang/heap_4.c.s
+.PHONY : third_party/freertos/portable/MemMang/heap_4.s
+
+# target to generate assembly for a file
+third_party/freertos/portable/MemMang/heap_4.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_a_active.dir/build.make CMakeFiles/node_a_active.dir/third_party/freertos/portable/MemMang/heap_4.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_b_standby.dir/build.make CMakeFiles/node_b_standby.dir/third_party/freertos/portable/MemMang/heap_4.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_c_env.dir/build.make CMakeFiles/node_c_env.dir/third_party/freertos/portable/MemMang/heap_4.c.s
+.PHONY : third_party/freertos/portable/MemMang/heap_4.c.s
+
+third_party/freertos/queue.o: third_party/freertos/queue.c.o
+.PHONY : third_party/freertos/queue.o
+
+# target to build an object file
+third_party/freertos/queue.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_a_active.dir/build.make CMakeFiles/node_a_active.dir/third_party/freertos/queue.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_b_standby.dir/build.make CMakeFiles/node_b_standby.dir/third_party/freertos/queue.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_c_env.dir/build.make CMakeFiles/node_c_env.dir/third_party/freertos/queue.c.o
+.PHONY : third_party/freertos/queue.c.o
+
+third_party/freertos/queue.i: third_party/freertos/queue.c.i
+.PHONY : third_party/freertos/queue.i
+
+# target to preprocess a source file
+third_party/freertos/queue.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_a_active.dir/build.make CMakeFiles/node_a_active.dir/third_party/freertos/queue.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_b_standby.dir/build.make CMakeFiles/node_b_standby.dir/third_party/freertos/queue.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_c_env.dir/build.make CMakeFiles/node_c_env.dir/third_party/freertos/queue.c.i
+.PHONY : third_party/freertos/queue.c.i
+
+third_party/freertos/queue.s: third_party/freertos/queue.c.s
+.PHONY : third_party/freertos/queue.s
+
+# target to generate assembly for a file
+third_party/freertos/queue.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_a_active.dir/build.make CMakeFiles/node_a_active.dir/third_party/freertos/queue.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_b_standby.dir/build.make CMakeFiles/node_b_standby.dir/third_party/freertos/queue.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_c_env.dir/build.make CMakeFiles/node_c_env.dir/third_party/freertos/queue.c.s
+.PHONY : third_party/freertos/queue.c.s
+
+third_party/freertos/tasks.o: third_party/freertos/tasks.c.o
+.PHONY : third_party/freertos/tasks.o
+
+# target to build an object file
+third_party/freertos/tasks.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_a_active.dir/build.make CMakeFiles/node_a_active.dir/third_party/freertos/tasks.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_b_standby.dir/build.make CMakeFiles/node_b_standby.dir/third_party/freertos/tasks.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_c_env.dir/build.make CMakeFiles/node_c_env.dir/third_party/freertos/tasks.c.o
+.PHONY : third_party/freertos/tasks.c.o
+
+third_party/freertos/tasks.i: third_party/freertos/tasks.c.i
+.PHONY : third_party/freertos/tasks.i
+
+# target to preprocess a source file
+third_party/freertos/tasks.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_a_active.dir/build.make CMakeFiles/node_a_active.dir/third_party/freertos/tasks.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_b_standby.dir/build.make CMakeFiles/node_b_standby.dir/third_party/freertos/tasks.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_c_env.dir/build.make CMakeFiles/node_c_env.dir/third_party/freertos/tasks.c.i
+.PHONY : third_party/freertos/tasks.c.i
+
+third_party/freertos/tasks.s: third_party/freertos/tasks.c.s
+.PHONY : third_party/freertos/tasks.s
+
+# target to generate assembly for a file
+third_party/freertos/tasks.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_a_active.dir/build.make CMakeFiles/node_a_active.dir/third_party/freertos/tasks.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_b_standby.dir/build.make CMakeFiles/node_b_standby.dir/third_party/freertos/tasks.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node_c_env.dir/build.make CMakeFiles/node_c_env.dir/third_party/freertos/tasks.c.s
+.PHONY : third_party/freertos/tasks.c.s
 
 # Help Target
 help:
@@ -163,9 +485,43 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... node_a_pedal_ecu"
-	@echo "... node_b_engine_ecu"
-	@echo "... node_c_cluster_ecu"
+	@echo "... node_a_active"
+	@echo "... node_b_standby"
+	@echo "... node_c_env"
+	@echo "... Core/Src/Rte_mock.o"
+	@echo "... Core/Src/Rte_mock.i"
+	@echo "... Core/Src/Rte_mock.s"
+	@echo "... Core/Src/hil.o"
+	@echo "... Core/Src/hil.i"
+	@echo "... Core/Src/hil.s"
+	@echo "... Core/Src/main_node_a.o"
+	@echo "... Core/Src/main_node_a.i"
+	@echo "... Core/Src/main_node_a.s"
+	@echo "... Core/Src/main_node_b.o"
+	@echo "... Core/Src/main_node_b.i"
+	@echo "... Core/Src/main_node_b.s"
+	@echo "... Core/Src/main_node_c.o"
+	@echo "... Core/Src/main_node_c.i"
+	@echo "... Core/Src/main_node_c.s"
+	@echo "... Core/Src/protocol.o"
+	@echo "... Core/Src/protocol.i"
+	@echo "... Core/Src/protocol.s"
+	@echo "... third_party/cmsis_f4/Source/Templates/gcc/startup_stm32f412cx.o"
+	@echo "... third_party/freertos/list.o"
+	@echo "... third_party/freertos/list.i"
+	@echo "... third_party/freertos/list.s"
+	@echo "... third_party/freertos/portable/GCC/ARM_CM4F/port.o"
+	@echo "... third_party/freertos/portable/GCC/ARM_CM4F/port.i"
+	@echo "... third_party/freertos/portable/GCC/ARM_CM4F/port.s"
+	@echo "... third_party/freertos/portable/MemMang/heap_4.o"
+	@echo "... third_party/freertos/portable/MemMang/heap_4.i"
+	@echo "... third_party/freertos/portable/MemMang/heap_4.s"
+	@echo "... third_party/freertos/queue.o"
+	@echo "... third_party/freertos/queue.i"
+	@echo "... third_party/freertos/queue.s"
+	@echo "... third_party/freertos/tasks.o"
+	@echo "... third_party/freertos/tasks.i"
+	@echo "... third_party/freertos/tasks.s"
 .PHONY : help
 
 

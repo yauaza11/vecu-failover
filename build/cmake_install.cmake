@@ -39,15 +39,7 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/bin/objdump")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-  include("/home/soo/vhil_project/build/node_a_pedal_ecu/cmake_install.cmake")
-  include("/home/soo/vhil_project/build/node_b_engine_ecu/cmake_install.cmake")
-  include("/home/soo/vhil_project/build/node_c_cluster_ecu/cmake_install.cmake")
-
+  set(CMAKE_OBJDUMP "arm-none-eabi-objdump")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
