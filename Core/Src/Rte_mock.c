@@ -20,3 +20,7 @@ void Rte_Init_ASW(void) {
 void Rte_Call_ASW_Step(void) {
     hil_step();
 }
+
+void SystemInit(void){
+    
+}

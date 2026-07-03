@@ -1,0 +1,7 @@
+/build/
+/build_test/
+/sil/build/
+*.o
+*.elf
+*.bin
+*.log

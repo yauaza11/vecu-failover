@@ -1,5 +1,0 @@
-/home/soo/vhil_project/build/CMakeFiles/node_a_active.dir
-/home/soo/vhil_project/build/CMakeFiles/node_b_standby.dir
-/home/soo/vhil_project/build/CMakeFiles/node_c_env.dir
-/home/soo/vhil_project/build/CMakeFiles/edit_cache.dir
-/home/soo/vhil_project/build/CMakeFiles/rebuild_cache.dir
