@@ -13,9 +13,12 @@
 #endif
 
 static uint8_t u8EngineSeq = 0;
-static uint16_t u16HeartbeatCycleCounter = 0; // 하트비트 전용 카운터 (u8EngineSeq는 4bit 프로토콜 필드라 500ms 주기를 못 셈)
-
-#define HEARTBEAT_PERIOD_CYCLES 50 /* 10ms * 50 = 500ms 마다 생존 신고 */
+static uint8_t u8HeartBeat = 0;
+/* TODO: 하트비트 전용 카운터를 여기에 선언하세요.
+ * 힌트: u8EngineSeq는 4bit 프로토콜 시퀀스 필드라 0~15만 돔 - 500ms(=50cycle)를
+ *       세는 용도로 못 씁니다. 별도 카운터가 필요해요.
+ * 막히면: git show main:Core/Src/main_node_a.c
+ */
 
 /* ==========================================================================
  * 🧱 Node A의 메인 10ms 스케줄러 & 하트비트 토스 Task
@@ -53,11 +56,17 @@ void vBsw_ActiveEngineControlTask(void *pvParameters) {
 
         Can_Write(0x301, txData, 4);
 
-        // 🚑 [이중화 하트비트] 500ms 마다 생존 보고 신호 슛 (u8EngineSeq와 독립된 카운터로 주기 보장)
-        u16HeartbeatCycleCounter = (u16HeartbeatCycleCounter + 1) % HEARTBEAT_PERIOD_CYCLES;
-        if (u16HeartbeatCycleCounter == 0) {
-            uint8_t hbData[8] = {0,};
-            hbData[0] = u8EngineSeq;
+        /* TODO: 여기에 하트비트 전송 로직을 짜세요.
+         * - 500ms(=50 사이클)마다 한 번 Can_Write(0x100, ...)로 하트비트 전송
+         * - u8EngineSeq랑 절대 같은 변수를 재사용하지 마세요 (그게 원래 버그였음)
+         */
+
+        uint8_t hbData[8]={0,};
+        hbData[0] = u8EngineSeq;
+
+        u8HeartBeat = (u8HeartBeat+1) % 50;
+
+        if(u8HeartBeat==0){
             Can_Write(0x100, hbData, 1);
         }
 
