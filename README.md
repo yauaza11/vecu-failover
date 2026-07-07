@@ -2,10 +2,7 @@
 
 Active-Standby 이중화 엔진 ECU를 AUTOSAR 스타일 계층 구조로 구현하고, **Can Driver(MCAL)를 교체 가능한 인터페이스로 분리**해서 두 가지 방식으로 검증하는 프로젝트입니다.
 
-- **타겟/QEMU 빌드**: STM32F412 레지스터를 직접 제어하는 실제 펌웨어를 QEMU 위에서 실행 (PIL)
 - **SIL(vECU) 빌드**: 동일한 BSW/ASW 코드를 리눅스 네이티브 프로세스로 컴파일하고, Linux SocketCAN(`vcan0`)을 실제 CAN 버스처럼 사용해 노드 간 통신을 검증 (SIL)
-
-두 빌드는 `Core/Src/main_node_*.c`(BSW/ASW 로직)를 **완전히 동일하게 공유**하고, `can_driver_stm32.c` / `can_driver_socketcan.c`(MCAL)만 교체됩니다.
 
 ## 구성
 
@@ -33,21 +30,12 @@ RTE  (Rte_mock.c)
 BSW  (main_node_*.c — 페달 처리, 하트비트, 페일오버 FSM)
  ↓
 MCAL (can_driver.h 인터페이스)
- ├─ can_driver_stm32.c      — 타겟/QEMU 빌드용 (CAN1 레지스터)
  └─ can_driver_socketcan.c  — SIL 빌드용 (Linux SocketCAN raw socket)
 ```
 
 BSW/RTE/ASW는 두 빌드에서 한 글자도 바뀌지 않고, MCAL 구현체만 빌드 타깃에 따라 교체됩니다.
 
 ## 빌드
-
-### 타겟 / QEMU
-
-```bash
-mkdir build && cd build
-cmake .. && make -j4
-./run_vhil.sh   # QEMU로 노드 3개 실행
-```
 
 ### SIL (vECU)
 
